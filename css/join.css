@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* idmaru.css */
+.relative{position:relative;}
+.inline{display:inline;}
+.pointer{cursor:pointer;}
+.button_gb{position:absolute; padding:5px 7px; border:#AEAEAE 1px solid; border-radius:4px; background-color:#FFF; color:#174f64; font-size:10pt; font-weight:bold; line-height:1;}
+.button_gb:hover{cursor:pointer; border:#F98600 1px solid;}
+.input_blue{border:#98C0E2 1px solid;}
+.popup_body{background-color:#F8FFFB;}
+.c_00324C{color:#00324C;} /*글자-진한 파랑*/
+/*************/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, fieldset, input, th, td{margin : 0px; border : 0px; padding : 0px;}
+body {background-color:#FDFDFD; font-family:돋움, dotum, 굴림, gulim, arial, sans-serif, verdana; font-size:10pt; font-weight:bold; color:#666666; padding:50px; line-height:2;}
+a{color:#666666; text-decoration: none;}
+textarea{resize:none;}
+.title { padding:0 20px; margin:10px 0; background-color:#377EB6; color:#FFF;}
+.desc { margin : 0 0 0 10px;}
+.box1{background-color:#FFF; border:1px solid; border-radius:4px;}
+.box1_title{padding:0 5px; border-bottom:#666666 1px solid; color:#00324C;}
+.join_item{position:relative; margin:5px 10px;}
+.join_item_input{position:absolute; left:175px; top:2px; padding:2px 5px; width:140px;}
+.join_item_check{position:absolute; left:350px; top:1px; color:#F98600;}
+#join {position:absolute; left:0px; top:0px; border-bottom:#377EB6 2px solid; color:#377EB6; font-size:12pt; z-index:2;}
+#email {width:210px; }
+#familyname {position:absolute; left:100px; top:4px; padding : 2px 5px; width:105px; }
+#firstname {position:absolute; left:100px; top:4px; padding : 2px 5px; width:140px; }
+#male_title{position:absolute; left:100px; }
+.first_item{position:absolute; left:100px;}
+#birthday_y {padding : 2px; }
+#birthday_m {padding : 2px; }
+#birthday_d {padding : 2px; }
+#add_country {position:absolute; left:100px; top:5px; padding : 2px 5px; width:105px; }
+#add_region {position:absolute; left:100px; top:5px; padding : 2px 5px; width:105px; }
+#add_detail {position:absolute; left:100px; top:5px; padding : 2px 5px; width:350px; }
+#clause_agree1{position : relative; width : 20px; height : 20px; top : 7px; left : 0px;}
+#submit{left:0px; padding:10px;}
+#reset{left:100px; padding:10px;}
+#auto_prevent_submit{position:relative; padding:10px 20px; margin:20px}
+#auto_prevent_submit:hover{cursor:pointer;}
+#find_id{position:absolute; left:20px; top:10px; width:340px; height:170px; padding:10px;}
+#find_password{position:absolute; left: 390px; top:10px; width:350px;  height:170px; padding:10px;}
+#find_id_email{position:relative; display:inline; margin:0 0 0 10px; padding:3px; width:230px;}
+#find_id_submit{position:relative; display:inline; margin:0 0 0 5px; padding:5px;}
+#find_id_submit:hover, #find_password_submit:hover{cursor:pointer;}
+.box_colon{position:absolute; left:65px; top:0px;}
+#find_password_id{position:absolute; left:85px; padding:3px; width:170px;}
+#find_password_email{position:absolute; left:85px; padding:3px; width:240px;}

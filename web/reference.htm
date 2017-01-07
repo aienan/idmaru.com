@@ -1,0 +1,45 @@
+$("#write_'.$sql_fetch_array1["count"].' #guest_friend_submit").click(function(){//친구신청을 클릭시
+	if(user_num==0){
+		alert("로그인 후 이용해주시기 바랍니다");
+	} else if(user_num=='.$sql_fetch_array1["user_num"].'){
+		alert("본인에게 친구신청 할 수 없습니다");
+	} else {
+		var friend_name = "'.$write_id.'";
+		var isidmaruid = is_idmaru_id(friend_name);
+		if(isidmaruid != -1){
+			alert("이드마루 관리자는 친구 신청에서 제외됩니다.");
+		} else {
+			var reply = confirm(friend_name+"님께 친구 신청하시겠습니까?");
+			if(reply==true){
+				var senddata = {friend_name:friend_name};
+				$.getJSON("home_friend_register.php", senddata, function (getdata) {
+					$.each(getdata, function (key, value) {
+						if(value=="user_stop"){
+							alert("탈퇴한 회원입니다.");
+						} else if(value=="myself"){
+							alert("본인은 친구로 등록할 수 없습니다.");
+						}else if(value=="not_certified"){
+							alert("아직 인증되지 않은 회원입니다.");
+						}else if (value=="exist"){
+							alert("친구로 이미 등록되어 있습니다.");
+						}else if(value=="on_request"){
+							alert("친구로 신청한 상태입니다.");
+						} else if(value=="on_receiving"){
+							alert("친구 신청을 받은 상태입니다. 새로운 소식을 확인해보세요.");
+							location.href = "home.php";
+						} else if (value=="submit"){
+							alert("친구 신청이 완료되었습니다. 상대방이 승인할 때 친구로 등록됩니다.");
+						} else if (value=="cannot"){
+							alert("등록된 아이디가 아닙니다.");
+						}
+					});
+				});
+			}
+		}
+	}
+});
+$.valHooks.textarea = {
+	get: function( elem ) {
+	return elem.value.replace( /\r?\n/g, "" );
+	}
+};
